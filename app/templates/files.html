@@ -2,9 +2,12 @@
 
 {% block main %}
     <h2>{{ description }}</h2>
-    <ul>
+    <div class="flex-container">
+
+
     {% for image in images %}
-      <li><img src="{{ url_for('static', filename="uploads/" + image) }}"></li>
+    <div> <img src="{{ url_for('static', filename="uploads/" + image) }}">    </div>
     {% endfor %}
-    <ul>
+
+      </div>
 {% endblock %}
